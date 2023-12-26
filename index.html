@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css1/style.css">
+    <link rel="shortcut icon" href="image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Utech</title>
+</head>
+<style type="text/css">
+    @media (min-width: 768px) and (max-width: 1024px) {
+    .custom-bg-image {
+        background: none;
+    }
+}
+</style>
+<body class="bg-white">
+
+
+
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="images/img.jpg" class="" alt="Flowbite Logo">
+  </a>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+    <button type="button" class="text-black hidden lg:block bg-white mr-4 hover:text-[#EA580C] focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-blue-800">Log In</button>
+      <button type="button" class="hidden md:block text-black bg-white border-2 border-black font-medium rounded-lg text-sm px-4 py-2 text-center hover:text-[#EA580C] hover:border-[#EA580C] dark:focus:ring-blue-800">Sign Up Now</button>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-left flex-grow text-left justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <a href="#" class="block py-2 px-3 lg:ml-16 ml-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#EA580C] md:p-0 md:dark:hover:text-[#EA580C] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Products</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 lg:ml-8 ml-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#EA580C] md:p-0 md:dark:hover:text-[#EA580C] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Solution</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 lg:ml-8 ml-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#EA580C] md:p-0 md:dark:hover:text-[#EA580C] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+      </li>
+      <li>
+          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center lg:ml-8 ml-0 font-semibold justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#EA580C] md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Resources <svg class="w-2.5 h-2.5 ml-4 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+  </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                </div>
+            </div>
+        </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="max-w-screen-xl container mx-auto flex px-5 py-36 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 relative">
+      <svg width="196" height="23" viewBox="0 0 196 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute lg:mt-[67px] mt-8">
+ <path d="M0.5 9C25.5 6.50002 116.5 1.63772 191 9.00002C152.328 9.00002 101.942 9.74447 69.5 17.5" stroke="#FB923C" stroke-width="10" stroke-linejoin="round"/>
+ </svg>
+
+      <h1 class="title-font lg:text-7xl text-4xl mb-4 font-bold text-gray-900">Teach students
+        <br class="hidden lg:inline-block">worldwide
+      </h1>
+      <p class="mb-8 leading-relaxed lg:text-2xl text-sm">Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend proin massa tincidunt viverra lectus pulvinar. Nunc ipsum est pellentesque turpis ultricies.</p>
+      <div class="flex justify-center">
+        <button class="lg:text-xl text-xs font-semibold text-white bg-[#EA580C] border-0 py-3 px-4 focus:outline-none hover:bg-orange-500 rounded text-lg">Sign Up Now</button>
+        <button class="lg:text-xl text-xs font-semibold ml-4 inline-flex text-blue-600 bg-white border-0 py-3 px-4 focus:outline-none rounded hover:bg-gray-200 text-lg"><i class="fa-solid fa-circle-play mt-1 mr-2"></i>View Demo</button>
+      </div>
+      <div class="flex ">
+    <img class="sm:w-full w-3/5  rounded-2xl lg:mt-8 mt-4" src="images/img3.jpg" alt="">
+ </div>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="images/img2.jpg">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="bg-[#f1f4f9] text-gray-600 body-font">
+  <div class="container max-w-screen-xl px-5 mx-auto bg-center bg-no-repeat rounded-md" style="background-image: url('images/img6.jpg')">
+    <div class="flex flex-col sm:text-center text-left w-full mb-20 relative">
+      <h1 class="mt-20 lg:text-[56px] text-xl font-bold title-font text-gray-900">All the tools
+      <svg width="130" height="23" viewBox="0 0 196 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute ml-[460px] hidden lg:block">
+ <path d="M0.5 9C25.5 6.50002 116.5 1.63772 191 9.00002C152.328 9.00002 101.942 9.74447 69.5 17.5" stroke="#FB923C" stroke-width="10" stroke-linejoin="round"/>
+ </svg>
+  that you need</h1>
+      <p class="text-black mt-8">Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris.<br class="hidden lg:inline-block">Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse.</p>
+    </div>
+    <div class="flex items-center justify-center">
+    <img class="sm:w-4/5 w-4/5 mb-12 rounded-2xl" src="images/img4.jpg" alt="">
+  </div>
+  <svg width="79%" height="89" viewBox="0 0 1095 79" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute mt-[-50px]  lg:ml-20 ml-16  sm:ml-20 ml-4">
+   <path d="M1 78C1 -34 548 49 548 0" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M274 78C274 14 548 49 548 0" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M410 78C410 17 548 49 548 0" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M1094 78C1094 -34 547 49 547 0" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M959 78C962 -4 547 49 547 0" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M821 78C821 14 547 49 547 0" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M548 3L548 78" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M685 78C685 17 547 49 547 0" stroke="#CBD5E1" stroke-dasharray="6 6"/>
+   <path d="M136 78C133 -4 548 49 548 0" stroke="#FB923C" stroke-dasharray="6 6"/>
+   </svg>
+
+  <div class="flex items-center justify-center">
+    <img class="sm:w-[90%] w-4/5  rounded-2xl lg:mt-12 mt-4 mb-16" src="images/Frame 2300.jpg" alt="">
+  </div>
+    </div>
+</section>
+
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="max-w-screen-xl container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 relative">
+      <h1 class="title-font lg:text-6xl text-xl mb-4 font-bold text-gray-900">An all-in-one app that
+        <br class="hidden lg:inline-block">makes it easier
+      </h1>
+      <svg width="300" height="23" viewBox="0 0 196 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute mt-12 ml-[80px] hidden lg:block">
+  <path d="M0.5 9C25.5 6.50002 116.5 1.63772 191 9.00002C152.328 9.00002 101.942 9.74447 69.5 17.5" stroke="#FB923C" stroke-width="10" stroke-linejoin="round"/>
+  </svg>
+      <p class="mb-8 leading-relaxed lg:text-xl text-sm"><i class="fa-solid text-sm mr-2 fa-check"></i> Est et in pharetra magna adipiscing ornare aliquam.<br><i class="fa-solid text-sm mr-2 fa-check"></i> Tellus arcu sed consequat ac velit ut eu blandit.<br><i class="fa-solid text-sm mr-2 fa-check"></i> Ullamcorper ornare in et egestas dolor orci.</p>
+     <a href="" class="text-blue-600 inline-flex items-center hover:text-[#EA580C] md:mb-2 lg:mb-0">Find more about the app
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="images/img8.png">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="max-w-screen-xl container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <img class="object-cover object-center rounded" alt="hero" src="images/img9.jpg">
+    </div>
+    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left relative">
+        <img src="images/img10.jpg" class="hidden xl:block absolute ml-[420px] mt-[-40px]">
+      <h1 class="title-font lg:text-6xl text-xl mb-4 font-medium text-gray-900">Meet international 
+        <br class="hidden lg:inline-block">students & teachers
+      </h1>
+      <p class="mb-8 leading-relaxed">Morbi sit egestas dignissim pharetra, sed amet. Tempus justo senectus risus ac vel, velit, nunc. Eget commodo eget in aliquam facilisi facilisi nec magna hendrerit. Placerat ipsum sit tellus urna, faucibus aenean lorem faucibus integer.</p>
+      <div class="flex">
+        <a href="" class="text-blue-600 inline-flex items-center hover:text-[#EA580C] md:mb-2 lg:mb-0">Explore teachers and students
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="bg-gray-900">
+ <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="grid row-gap-8 sm:grid-cols-3">
+    <div class="text-center items-center justify-center">
+      <i class="fa-brands sm:text-4xl text-3xl text-yellow-400 fa-gratipay"></i>
+      <h6 class="text-5xl mb-4 font-bold text-yellow-400">195</h6>
+      <p class="font-bold text-yellow-400 sm:mb-0 mb-12">user countries</p>
+    </div>
+    <div class="text-center">
+                <i class="fa-solid fa-gem sm:text-4xl text-3xl text-yellow-400 "></i>
+      <h6 class="text-5xl mb-4 font-bold text-yellow-400">1M</h6>
+      <p class="font-bold text-yellow-400 sm:mb-0 mb-12">valued teachers</p>
+    </div>
+    <div class="text-center">
+                <i class="fa-solid fa-graduation-cap sm:text-4xl text-3xl text-yellow-400 "></i>
+      <h6 class="text-5xl mb-4 font-bold text-yellow-400">17M</h6>
+      <p class="font-bold text-yellow-400 sm:mb-0 mb-12">happy students</p>
+    </div>
+  </div>
+ </div>
+</section>
+
+
+
+ <div class="max-w-screen-xl gallery rounded mx-auto mt-16 m-5 bg-white hidden xl:block" style="width:1250px;">
+
+            <h1 class="lg:text-5xl text-3xl font-bold absolute mb-20">What everyone says</h1>
+        <div class="top flex p-2 select-none">
+          <div class="heading text-gray-800 w-full pl-3 font-semibold my-auto">
+          </div>
+          <div class="buttons ml-auto md:mb-20 mb-8 flex text-[#EA580C] mr-1">
+            <svg action="prev" class="w-10 mr-4 border-2 border-[#EA580C] rounded-full p-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="prev" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+            <svg action="next" class="w-10  border-2 border-[#EA580C] rounded-full cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="next" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+          </div>
+        </div>
+        <div class="content-area w-full h-88 overflow-hidden">
+          <div class="platform h-full flex">
+            <!-- frame start -->
+            <div class="each-frame border-2 rounded-2xl shadow-md m-4 flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-black">
+                                        <img src="images/img11.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Hellen Jummy</span>
+                                            <cite class="not-italic"><a href="#">Financial Counselor</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- frame end -->
+
+            <div class="each-frame border-2 rounded-2xl shadow-md m-4 flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-black">
+                                        <img src="images/img12.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Ralph Edwards</span>
+                                            <cite class="not-italic"><a href="#">Math Teacher</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- frame end -->
+
+             <div class="each-frame border-2 rounded-2xl m-4 shadow-md flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-black">
+                                        <img src="images/img13.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Hellena John</span>
+                                            <cite class="not-italic"><a href="#">Psychology Student</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- frame end -->
+
+            <div class="each-frame border-2 rounded-2xl shadow-md m-4 flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-black">
+                                        <img src="images/img11.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Hellen Jummy</span>
+                                            <cite class="not-italic"><a href="#">Financial Counselor</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- frame end -->
+
+
+
+              <div class="each-frame border-2 rounded-2xl shadow-md m-4 flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-black">
+                                        <img src="images/img12.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Ralph Edwards</span>
+                                            <cite class="not-italic"><a href="#">Math Teacher</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="each-frame border-2 rounded-2xl shadow-md m-4 flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-emerald-500">
+                                        <img src="images/img11.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Hellen Jummy</span>
+                                            <cite class="not-italic"><a href="#">Financial Counselor</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <div class="each-frame border-2 rounded-2xl m-4 shadow-md flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-black">
+                                        <img src="images/img13.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Hellena John</span>
+                                            <cite class="not-italic"><a href="#">Psychology Student</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+           <div class="each-frame border-2 rounded-2xl shadow-md m-4 flex-none" title=""> <!-- title shows in top -->
+                <!-- this is full editable area -->
+                <div class="main flex w-96 p-8"> 
+                    <div class="sub my-auto">
+                    
+                    <div class="sub w-full my-auto">
+                        <div class="long-text text-lg"> <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi.</p>
+
+                                    <div class="flex items-center gap-4 pt-10 text-sm text-left text-emerald-500">
+                                        <img src="images/img11.jpg" alt="user name" title="user name" width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                        <div class="flex flex-col gap-1">
+                                            <span class="font-bold uppercase">Hellen Jummy</span>
+                                            <cite class="not-italic"><a href="#">Financial Counselor</a></cite>
+                                        </div>
+                                    </div></div> 
+                        <!-- this buttons are usable everywhere inside gallery element -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <style>
+          .platform{
+              position: relative;
+              transition:right 0.3s;
+          }
+          .body{background-color:white !important;}
+      </style>
+
+    <script>
+    function gallery() {
+        this.index = 0;
+        this.cardsPerPage = 3.3; // Number of cards per page
+        this.load = function () {
+            this.rootEl = document.querySelector(".gallery");
+            this.platform = this.rootEl.querySelector(".platform");
+            this.frames = this.platform.querySelectorAll(".each-frame");
+            this.contentArea = this.rootEl.querySelector(".content-area");
+            this.width = parseInt(this.rootEl.style.width);
+            this.cardWidth = this.width / this.cardsPerPage; // Calculate card width
+            this.spacing = 10; // Set your desired spacing here
+
+            this.limit = {
+                start: 0,
+                end: Math.ceil(this.frames.length / this.cardsPerPage) - 1
+            };
+
+            this.frames.forEach(each => {
+                each.style.width = this.cardWidth - this.spacing + "px"; // Adjust card width
+            });
+
+            this.goto(this.index);
+        }
+
+        this.set_title = function () {
+            this.rootEl.querySelector(".heading").innerText = this.frames[this.index].getAttribute("title");
+        }
+
+        this.next = function () {
+            this.platform.style.right = (this.cardWidth + this.spacing) * ++this.index + "px";
+            this.set_title();
+        }
+
+        this.prev = function () {
+            this.platform.style.right = (this.cardWidth + this.spacing) * --this.index + "px";
+            this.set_title();
+        }
+
+        this.goto = function (index) {
+            this.platform.style.right = (this.cardWidth + this.spacing) * index + "px";
+            this.index = index;
+            this.set_title();
+        }
+
+        this.load();
+    }
+
+    var G = new gallery();
+
+    G.rootEl.addEventListener("click", function (t) {
+        var val = t.target.getAttribute("action");
+        if (val == "next" && G.index != G.limit.end) {
+            G.next();
+        }
+        if (val == "prev" && G.index != G.limit.start) {
+            G.prev();
+        }
+        if (val == "goto") {
+            let rv = t.target.getAttribute("goto");
+            rv = rv == "end" ? G.limit.end : rv;
+            G.goto(parseInt(rv));
+        }
+    });
+
+    document.addEventListener("keyup", function (t) {
+        var val = t.keyCode;
+        if (val == 39 && G.index != G.limit.end) {
+            G.next();
+        }
+        if (val == 37 && G.index != G.limit.start) {
+            G.prev();
+        }
+    });
+
+    // run G.load() if new data loaded with ajax
+</script>
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="max-w-screen-xl container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 relative">
+      <h1 class="title-font lg:text-6xl text-2xl mb-4 font-bold text-gray-900">All the cool features</h1>
+      <svg width="300" height="23" viewBox="0 0 196 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute mt-[55px] ml-[300px] hidden xl:block">
+<path d="M0.5 9C25.5 6.50002 116.5 1.63772 191 9.00002C152.328 9.00002 101.942 9.74447 69.5 17.5" stroke="#FB923C" stroke-width="10" stroke-linejoin="round"/>
+</svg>
+      <p class="mb-8 leading-relaxed lg:text-xl text-sm">Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac. In et dolor eu donec maecenas nulla. Cum sed orci, sit pellentesque quisque feugiat cras ullamcorper. Ultrices in amet, ullamcorper non viverra a, neque orci.</p>
+     <a href="" class="text-blue-600 inline-flex items-center hover:text-[#EA580C] md:mb-2 lg:mb-0">View all the features
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="images/img15.jpg">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="bg-[#facc16] text-gray-600 body-font">
+  <div class="max-w-screen-xl container px-5 py-28 mx-auto bg-center bg-no-repeat rounded-md" style="background-image: url('images/img14.jpg')">
+    <div class="text-center mb-20">
+      <h1 class="sm:text-5xl text-2xl font-bold title-font text-gray-900 mb-4 mt-28">Join a world of learning</h1>
+      <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
+  Risus elit et fringilla habitant ut facilisi.</p>
+      <div class="flex mt-6 justify-center">
+        <button class="bg-[#EA580C] text-white px-8 py-3 rounded-lg hover:bg-orange-500">Sign Up Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--"Footer" start-->
+<footer class="bg-gray-900 dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-6">
+        <div>
+            <img src="images/img16.jpg" class="cursor-pointer">
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-bold text-white uppercase dark:text-white">Product</h2>
+            <ul class="text-gray-300 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Pricing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Overview</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Browse</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Accessibility <span class="text-purple-800 bg-white px-2 rounded">Beta</span></a>
+                </li>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-bold text-white uppercase dark:text-white">Solutions</h2>
+            <ul class="text-gray-300 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Brainstorming</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Ideation</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Wireframing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Research</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-bold text-white uppercase dark:text-white">Resources</h2>
+            <ul class="text-gray-300 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Help Center</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Blog</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Tutorials</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">FAQs</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-bold text-white uppercase dark:text-white">Support</h2>
+            <ul class="text-gray-300 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Developers</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Documentation</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Integrations</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-bold text-white uppercase dark:text-white">Company</h2>
+            <ul class="text-gray-300 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Press</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Events</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Request Demo <i class="fa-solid fa-arrow-right"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="px-4 py-6 md:flex md:items-center md:justify-between border-t border-gray-700">
+        <span class="text-sm cursor-default text-white dark:text-gray-300 sm:text-center">uteach @ 2023. All rights reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+            <a href="#" class="text-gray-900 dark:hover:text-white">
+              <a href="#" class="text-white dark:hover:text-white hover:text-gray-400">
+                  Term
+              </a>
+              <a href="#" class="text-white dark:hover:text-white hover:text-gray-400">
+                  Privacy
+              </a>
+              
+              <a href="#" class="text-white dark:hover:text-white hover:text-gray-400">
+                  Contact
+              </a>
+              <a href="#" class="hidden md:block text-white dark:hover:text-white hover:text-gray-400">
+                  <i class="fa-solid fa-globe"></i> EN
+              </a>
+              <a href="#" class="hidden md:block text-white dark:hover:text-white hover:text-gray-400">
+                  <i class="fa-solid fa-euro-sign"></i> EUR
+              </a>
+              <a href="#" class="hidden md:block text-white dark:hover:text-white hover:text-gray-400">
+                  <i class="fa-regular fa-circle-user"></i>
+              </a>
+        </div>
+  </div>
+</footer>
+
+
+
+</body>
+<script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+</html>
+
